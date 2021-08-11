@@ -1,0 +1,5 @@
+﻿Protocol,Port
+TCP,67
+UDP,69
+UDP,1759
+UDP,4011

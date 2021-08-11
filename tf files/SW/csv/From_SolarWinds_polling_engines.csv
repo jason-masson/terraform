@@ -1,0 +1,6 @@
+﻿Protocol,Port
+TCP,5671
+UDP,161
+TCP,1433
+UDP,1434
+TCP,17777

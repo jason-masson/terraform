@@ -1,0 +1,5 @@
+﻿Protocol,Port
+TCP,8092
+TCP,9590-9591
+TCP,9595
+UDP,9595

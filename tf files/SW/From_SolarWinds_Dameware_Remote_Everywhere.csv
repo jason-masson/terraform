@@ -1,0 +1,5 @@
+﻿Protocol,Port
+TCP,80
+TCP,443
+UDP,1234-1235
+TCP,3337

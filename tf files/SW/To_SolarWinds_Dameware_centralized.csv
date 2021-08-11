@@ -1,0 +1,4 @@
+﻿Protocol,Port
+TCP,443
+TCP,6129-6130
+TCP,6132-6133

@@ -1,0 +1,5 @@
+﻿Protocol,Port
+TCP,443
+TCP,444
+TCP,5223
+TCP,5528-5530

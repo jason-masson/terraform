@@ -1,0 +1,6 @@
+﻿Protocol,Port
+TCP,80
+TCP,443
+TCP,2195-2196
+TCP,5223
+TCP,5228

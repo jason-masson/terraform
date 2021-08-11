@@ -1,0 +1,4 @@
+﻿Protocol,Port
+TCP,1801
+TCP,17777
+UDP,162

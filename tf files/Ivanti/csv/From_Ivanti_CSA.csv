@@ -1,0 +1,5 @@
+﻿Protocol,Port
+TCP,22
+TCP,25
+TCP,80
+TCP,443

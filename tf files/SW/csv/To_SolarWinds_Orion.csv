@@ -1,0 +1,5 @@
+﻿Protocol,Port
+TCP,17778
+TCP,4369
+TCP,5671
+TCP,25672
