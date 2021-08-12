@@ -27,10 +27,16 @@ foreach ($data in (Import-Csv -Path $csvfile)) {
     Add-Content $OutputFile ""
     
     #Write a notification after each
-    Write-Host -ForegroundColor Green "Created Terraform tag config for $($VM ) tagged with $($tag)"
+    Write-Host -ForegroundColor Green "Created Terraform tag config for $($VM) tagged with $($tag)"
 }
 
 Write-Host -ForegroundColor Red "Finished!, Results saved to $($OutputFile)"
+
+#Garbage Collect to clear variables before the next run
+[System.GC]::Collect()
+
+
+
 
 #Example Config for VM tags
 

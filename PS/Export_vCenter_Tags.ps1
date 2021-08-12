@@ -28,6 +28,8 @@ foreach ($VM in $VMs) {
 #End notification 
 Write-Host -ForegroundColor Red "Finished!, Results saved to $TagExportFile"
 
+#Garbage Collect to clear variables before the next run
+[System.GC]::Collect()
     
 # #get UUID of VM
 # #Get-VM Xubuntu | %{(Get-View $_.Id).config.uuid}

@@ -36,9 +36,8 @@ foreach ($service in (Import-Csv -Path $csvfile)) {
 #End notification 
 Write-Host -ForegroundColor Red "Finished!, Results saved to $OutputFile"
 
-
-
-
+#Garbage Collect to clear variables before the next run
+[System.GC]::Collect()
 
 
 

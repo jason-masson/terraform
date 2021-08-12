@@ -34,6 +34,9 @@ foreach ($groupdata in (Import-Csv -Path $csvfile)) {
     Write-Host -ForegroundColor Green "Created Terraform config for $($group) group"
 }
 
+#Garbage Collect to clear variables before the next run
+[System.GC]::Collect()
+
 #Example Group Config
 
 # resource "nsxt_policy_group" "terraform" {
