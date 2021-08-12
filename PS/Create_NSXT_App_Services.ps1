@@ -5,11 +5,11 @@ Clear-Host
 
 #Variables Section
 #App Name
-$app = "To_Nutanix"
+$app = "Between_Splunk_search_head_cluster_members"
 #Import protocol & port numbers from the file below
-$csvfile = "C:\terraform\datafiles\Nutanix\To_Nutanix.csv"
+$csvfile = "D:\git\terraform\terraform\tf\Splunk\Between_Splunk_search_head_cluster_members.csv"
 #Where to save the generated config
-$OutputFile = "C:\terraform\$($app)_services.tf"
+$OutputFile = "D:\git\terraform\terraform\tf\$($app)_services.tf"
 
 #Start of Service Config
 Add-Content $OutputFile "resource `"nsxt_policy_service`" `"$($app)`" {"
