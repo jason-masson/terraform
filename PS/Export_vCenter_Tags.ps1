@@ -31,6 +31,8 @@ Write-Host -ForegroundColor Red "Finished!, Results saved to $TagExportFile"
 #Garbage Collect to clear variables before the next run
 [System.GC]::Collect()
     
+
+# Below is some scrape work that I dont want to delete just yet
 # #get UUID of VM
 # #Get-VM Xubuntu | %{(Get-View $_.Id).config.uuid}
 # Get-VM | Get-Member | Sort-Object -Property Name

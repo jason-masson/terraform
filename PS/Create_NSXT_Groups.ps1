@@ -1,15 +1,15 @@
-#This script will generate Terraform configurations for individual NSXT Services
+#This script will generate Terraform configurations for NSXT Groups
 
 #clean console before running
 Clear-Host
 
 #Variables Section
-#Import protocol & port numbers from the file below
-$csvfile = "C:\terraform\datafiles\groups.csv"
+#Import groups from the file below
+$csvfile = "D:\git\terraform\terraform\tf\NSX-T Groups\groups.csv"
 #Where to save the generated config
-$OutputFile = "C:\terraform\groups.tf"
+$OutputFile = "D:\terraform\groups.tf"
 
-
+#Import the CSV file and loop through the groups
 foreach ($groupdata in (Import-Csv -Path $csvfile)) {
     $group = $groupdata.Group
     

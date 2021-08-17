@@ -12,6 +12,7 @@ $csvfile = "D:\git\terraform\terraform\tf\Splunk\Between_Splunk_search_head_clus
 $OutputFile = "D:\git\terraform\terraform\tf\$($app)_services.tf"
 
 #Start of Service Config
+#Fiddling with this section will likely break the config
 Add-Content $OutputFile "resource `"nsxt_policy_service`" `"$($app)`" {"
 Add-Content $OutputFile "   description  = `"$($app)`""
 Add-Content $OutputFile "   display_name = `"$($app)`""
@@ -24,7 +25,6 @@ foreach ($service in (Import-Csv -Path $csvfile)) {
     
     #Section for generating the configs
     #Fiddling with this section will likely break the config
-   
     Add-Content $OutputFile "   l4_port_set_entry {"
     Add-Content $OutputFile "       display_name      = `"$($protocol)-$($port)`""
     Add-Content $OutputFile "       description       = `"$($protocol)-$($port)`""

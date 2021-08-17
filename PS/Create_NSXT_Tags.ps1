@@ -1,15 +1,15 @@
-#This script will generate Terraform configurations for individual NSXT Services
+#This script will generate Terraform configurations for NSXT Tags
 
 #clean console before running
 Clear-Host
 
 #Variables Section
-#Import protocol & port numbers from the file below
+#Import tag data from the file below
 $csvfile = "C:\terraform\VMTags.csv"
 #Where to save the generated config
 $OutputFile = "C:\terraform\tags.tf"
 
-#Import the CSV file, break out the port and protocol variables, then loop thru each
+#Import the CSV file, break out the VM, UUID, and tags then loop thru each
 foreach ($data in (Import-Csv -Path $csvfile)) {
     $VM = $data.VM
     $uuid = $data.UUID
