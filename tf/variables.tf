@@ -1,6 +1,6 @@
 #This file contains varibales for use in other files/configs
 
-# NSX Manager
+# NSX Manager IP or FQDN
 variable "nsx_manager" {
   default = "172.30.1.9"
 }

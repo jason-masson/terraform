@@ -17,6 +17,7 @@ Connect-VIServer -Server $vCenter -Credential $Credentials
 #Create CSV File Headers
 Add-Content -Path $TagExportFile -Value "VM,UUID,Tag,Category"
 
+#Get all VMs from vcenter, exclusing the vCLS VMs and then loop through them to extra data
 $VMs = Get-VM | Where-Object -Property "Name" -NotLike "vCLS*"
 foreach ($VM in $VMs) {
     
@@ -37,7 +38,6 @@ Write-Host -ForegroundColor Red "Finished!, Results saved to $TagExportFile"
 # #Get-VM Xubuntu | %{(Get-View $_.Id).config.uuid}
 # Get-VM | Get-Member | Sort-Object -Property Name
 # get-vm | Select-Object -Property Name,Id,uid | %{(Get-View $_.Id).config.uuid}
-
 
 # $vm.Name
 # (Get-View $vm.Id).config.uuid
