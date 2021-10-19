@@ -11,5 +11,5 @@ variable "username" {
 }
 
 variable "password" {
-    default = "INSERT_PWD"
+    sensitive = true
 }
