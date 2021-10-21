@@ -2,6 +2,7 @@
 Clear-Host
 
 #variables
+$nsxtvip = "https://172.30.1.9"
 
 #Prompt for Creds and convert to base64
 $creds = Get-Credential -Message "NSX-T Administrative Credentials:"
@@ -17,7 +18,7 @@ $body = "{
 `n    `"_revision`": 15            
 `n}"
 
-$response = Invoke-RestMethod -SkipCertificateCheck 'https://172.30.1.9/api/v1/global-configs/IdsGlobalConfig' -Method 'PUT' -Headers $headers -Body $body
+$response = Invoke-RestMethod -SkipCertificateCheck $nsxtvip/api/v1/global-configs/IdsGlobalConfig -Method 'PUT' -Headers $headers -Body $body
 $response | ConvertTo-Json
 
 #Clear Vars 

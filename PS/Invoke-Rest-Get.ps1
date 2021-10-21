@@ -2,7 +2,7 @@
 Clear-Host
 
 #variables
-#$nsxtvip = 172.30.1.9
+$nsxtvip = "https://172.30.1.9"
 #$endpoint = /api/etc (not sure about this variable name)
 
 #Prompt for Creds and convert to base64
@@ -13,7 +13,7 @@ $base64Creds = [Convert]::toBase64String([System.Text.Encoding]::UTF8.GetBytes("
 $headers = New-Object "System.Collections.Generic.Dictionary[[String],[String]]"
 $headers.Add("Authorization", "Basic $($base64Creds)")
 
-$response = Invoke-RestMethod -SkipCertificateCheck 'https://172.30.1.9/api/v1/global-configs/IdsGlobalConfig' -Method 'GET' -Headers $headers
+$response = Invoke-RestMethod -SkipCertificateCheck $nsxtvip/api/v1/global-configs/IdsGlobalConfig -Method 'GET' -Headers $headers
 $response | ConvertTo-Json
 
 #Clear Vars 
