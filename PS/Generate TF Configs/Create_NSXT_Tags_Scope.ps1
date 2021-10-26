@@ -4,9 +4,9 @@ Clear-Host
 
 #Variables Section
 #Import tag data from the file below
-$csvfile = "D:\datafiles\FAPS_TAG2.csv"
+$csvfile = "D:\datafiles\TAG2.csv"
 #Where to save the generated config
-$OutputFile = "D:\datafiles\FAPS_TAG2.tf"
+$OutputFile = "D:\datafiles\TAG2.tf"
 #Sacrificial VM UUID
 $uuid = "4226e820-8cad-70df-59e9-b148d82df229"
 
