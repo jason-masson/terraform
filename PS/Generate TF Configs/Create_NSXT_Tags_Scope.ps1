@@ -12,7 +12,7 @@ $uuid = "4226e820-8cad-70df-59e9-b148d82df229"
 
 #Start of Tag Config
 #Fiddling with this section will likely break the config
-Add-Content $OutputFile "resource `"nsxt_policy_vm_tags`" `"vmtags`" {"
+Add-Content $OutputFile "resource `"nsxt_policy_vm_tags`" `"vmtags1`" {"
 Add-Content $OutputFile "   instance_id  = `"$($uuid)`""
 Add-Content $OutputFile ""
 
