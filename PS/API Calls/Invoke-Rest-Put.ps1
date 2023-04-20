@@ -2,7 +2,7 @@
 Clear-Host
 
 #variables
-$nsxtvip = "https://172.30.1.9"
+$nsxtvip = "https://172.30.1.10"
 
 #Prompt for Creds and convert to base64
 $creds = Get-Credential -Message "NSX-T Administrative Credentials:"
@@ -15,7 +15,7 @@ $headers.Add("Content-Type", "application/json")
 $body = "{
 `n    `"global_idsevents_to_syslog_enabled`": true,
 `n    `"resource_type`": `"IdsGlobalConfig`",
-`n    `"_revision`": 15            
+`n    `"_revision`": 2            
 `n}"
 
 $response = Invoke-RestMethod -SkipCertificateCheck $nsxtvip/api/v1/global-configs/IdsGlobalConfig -Method 'PUT' -Headers $headers -Body $body
