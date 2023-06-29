@@ -1,4 +1,4 @@
-#This script will generate Terraform configurations for Adguard rewrites
+#This script will generate Terraform configurations for Adguard rewrites (dns records)
 
 #clean console before running
 Clear-Host
