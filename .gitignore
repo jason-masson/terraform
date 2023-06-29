@@ -1,4 +1,2 @@
-
-PS/Invoke-Rest-Scratch.ps1
-PS/Generate TF Configs/Create_NSXT_Groups_Tags_IP.ps1
-\variables.tf
+#https://www.freecodecamp.org/news/gitignore-file-how-to-ignore-files-and-folders-in-git/
+variables.tf
