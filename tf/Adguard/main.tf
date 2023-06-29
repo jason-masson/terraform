@@ -1,14 +1,14 @@
-#Import the NSXT Provider
+#Import the Adguard Provider
 terraform {
   required_providers {
-    nsxt = {
+    adguard = {
       source = "gmichels/adguard"
     }
   }
 }
 
-#NSXT Manger Connection
-provider "nsxt" {
+#Adguard Connection
+provider "adguard" {
   host     = var.agserver
   username = var.username
   password = var.password

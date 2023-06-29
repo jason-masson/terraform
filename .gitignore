@@ -1,3 +1,4 @@
 
 PS/Invoke-Rest-Scratch.ps1
 PS/Generate TF Configs/Create_NSXT_Groups_Tags_IP.ps1
+terraform/tf/Adguard/variables.tf

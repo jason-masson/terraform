@@ -2,7 +2,7 @@
 
 # NSX Manager IP or FQDN
 variable "agserver" {
-  default = "<IP_FQDN>"
+  default = "10.1.10.97"
 }
 
 # Username & Password for NSX-T Manager
@@ -11,5 +11,5 @@ variable "username" {
 }
 
 variable "password" {
-    sensitive = true
+    default = "ewb@&KL0TUJGIF$^QL2BC$d"
 }
